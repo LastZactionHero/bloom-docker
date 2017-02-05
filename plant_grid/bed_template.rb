@@ -43,8 +43,8 @@ class BedTemplate
 
     BedTemplate.new(
       definition['name'],
-      definition['design_width'],
-      definition['design_height'],
+      definition['size']['design']['width'],
+      definition['size']['design']['height'],
       definition['zones'],
       cell
     )

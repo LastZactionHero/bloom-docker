@@ -22,8 +22,11 @@ require 'json'
 
 definition = {
   name: 'Modern/Linear C',
-  design_width: 360,
-  design_height: 72,
+  size: {
+    design: {width: 360, height: 72},
+    max: {width: 1200, height: 2000},
+    min: {width: 12, height: 12}
+  },
   zones: ['5'],
   cell: {
     type: 'CompositeGridCell',
@@ -48,6 +51,8 @@ definition = {
               vertical_spacing: 3
             },
             pattern: 'RectPositionPattern',
+            search_query: {},
+            tooltip: 'This is a great plant for all occasions.',
             options: {}
           },
           {
@@ -61,6 +66,8 @@ definition = {
               vertical_spacing: 2
             },
             pattern: 'RectPositionPattern',
+            search_query: {},
+            tooltip: 'My boss made me use this plant.',
             options: {}
           }
         ],
@@ -77,6 +84,8 @@ definition = {
           vertical_spacing: 2
         },
         pattern: 'RectPositionPattern',
+        search_query: {},
+        tooltip: 'Put googly eyes on your plants to make them less scary.',
         options: {}
       }
     ],
