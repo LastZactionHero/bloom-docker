@@ -32,8 +32,14 @@ class BedTemplate
         {'RectPositionPattern' => RectPositionPattern}[cell_data['pattern']],
         (cell_data['options'] || {})
       )
+    when 'EmptyGridCell'
+      EmptyGridCell.new(
+        cell_data['width_percent'],
+        cell_data['height_percent'],
+        (cell_data['options'] || {})
+      )
     else
-      ArgumentError
+      raise ArgumentError
     end
   end
 
