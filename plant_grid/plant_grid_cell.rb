@@ -1,6 +1,6 @@
 class PlantGridCell < GridCell
-  def initialize(width_percent, height_percent, plant, position_pattern_klass)
-    super(width_percent, height_percent)
+  def initialize(width_percent, height_percent, plant, position_pattern_klass, options = {})
+    super(width_percent, height_percent, options)
 
     @plant = plant
     @position_pattern_klass = position_pattern_klass
