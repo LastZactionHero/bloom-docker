@@ -23,11 +23,12 @@ class BedTemplate
       PlantGridCell.new(
         cell_data['width_percent'],
         cell_data['height_percent'],
-        Plant.new(
+        PlantTemplate.new(
           cell_data['plant']['label'],
           cell_data['plant']['width'],
           cell_data['plant']['horizontal_spacing'],
-          cell_data['plant']['vertical_spacing']
+          cell_data['plant']['vertical_spacing'],
+          cell_data['plant']['search_query']
         ),
         {'RectPositionPattern' => RectPositionPattern}[cell_data['pattern']],
         (cell_data['options'] || {})

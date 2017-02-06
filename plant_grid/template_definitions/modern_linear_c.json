@@ -37,12 +37,12 @@
                      "label":"A",
                      "width":3,
                      "horizontal_spacing":3,
-                     "vertical_spacing":3
+                     "vertical_spacing":3,
+                     "search_query":{
+
+                     }
                   },
                   "pattern":"RectPositionPattern",
-                  "search_query":{
-
-                  },
                   "tooltip":"This is a great plant for all occasions.",
                   "options":{
 
@@ -56,12 +56,12 @@
                      "label":"B",
                      "width":2,
                      "horizontal_spacing":2,
-                     "vertical_spacing":2
+                     "vertical_spacing":2,
+                     "search_query":{
+
+                     }
                   },
                   "pattern":"RectPositionPattern",
-                  "search_query":{
-
-                  },
                   "tooltip":"My boss made me use this plant.",
                   "options":{
 
@@ -80,12 +80,12 @@
                "label":"C",
                "width":4,
                "horizontal_spacing":4,
-               "vertical_spacing":2
+               "vertical_spacing":2,
+               "search_query":{
+
+               }
             },
             "pattern":"RectPositionPattern",
-            "search_query":{
-
-            },
             "tooltip":"Put googly eyes on your plants to make them less scary.",
             "options":{
 

@@ -9,7 +9,7 @@ require './grid_cells/plant_grid_cell'
 require './grid_cells/empty_grid_cell'
 
 require './bed_template'
-require './plant'
+require './plant_template'
 require './grid'
 require './printer'
 
@@ -39,6 +39,6 @@ template = BedTemplate.parse(JSON.parse(json))
 # cell_c = PlantGridCell.new(0.3, 1.0, Plant.new('A', 2, 6, 2), RectPositionPattern)
 # cell_composite = CompositeGridCell.new(1.0, 1.0, :horizontal, [cell_a, cell_b, cell_c])
 
-grid = Grid.new(template.cell, 120, 10)
+grid = Grid.new(template.cell, 120, 30)
 printer = Printer.new(grid)
-printer.draw
+puts printer.draw

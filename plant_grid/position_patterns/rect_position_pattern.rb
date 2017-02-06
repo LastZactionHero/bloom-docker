@@ -10,14 +10,7 @@ class RectPositionPattern < PositionPattern
       (0..(plants_tall - 1)).each do |plant_y|
         pos_x = plant_x * @plant.width_with_horizontal_spacing + start_x
         pos_y = plant_y * @plant.width_with_vertical_spacing + start_y
-        @grid[pos_y][pos_x] = @plant.label
-
-        ( (pos_x - @plant.width / 2).ceil..(pos_x + @plant.width / 2).floor).each do |width_pos_x|
-          @grid[pos_y][width_pos_x] = @plant.label
-        end
-        ( (pos_y - @plant.width / 2).ceil..(pos_y + @plant.width / 2).floor).each do |width_pos_y|
-          @grid[width_pos_y][pos_x] = @plant.label
-        end
+        @grid[pos_y][pos_x] = @plant
       end
     end
   end
