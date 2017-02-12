@@ -4,3 +4,6 @@
 [submodule "search/src"]
 	path = search/src
 	url = git@github.com:LastZactionHero/bloom-search.git
+[submodule "api_user/src"]
+	path = api_user/src
+	url = git@github.com:LastZactionHero/bloom-api-user.git

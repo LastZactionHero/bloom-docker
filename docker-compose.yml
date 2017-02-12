@@ -22,6 +22,17 @@ services:
       - "3000:3000"
     depends_on:
       - db
+  api_user:
+    build: ./api_user
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./api_user/src:/var/www/api
+    env_file:
+      - './api_user/.env'
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
   db:
     image: postgres
     volumes:
