@@ -10,6 +10,16 @@ services:
       - "8001:8001" # Dev
     depends_on:
       - api
+  app:
+    build: ./app
+    command: npm start
+    volumes:
+      - ./app/src:/var/www/app
+    ports:
+      - "8002:8002"
+    depends_on:
+      - api
+      - api_user
   api:
     build: ./api
     # command: echo | pwd

@@ -7,3 +7,6 @@
 [submodule "api_user/src"]
 	path = api_user/src
 	url = git@github.com:LastZactionHero/bloom-api-user.git
+[submodule "app/src"]
+	path = app/src
+	url = git@github.com:LastZactionHero/bloom-app.git
