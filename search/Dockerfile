@@ -6,5 +6,5 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 
 ADD . /var/www/search
-WORKDIR /var/www/search
+WORKDIR /var/www/search/src
 RUN npm install
