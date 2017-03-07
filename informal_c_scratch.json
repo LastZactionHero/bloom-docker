@@ -5,12 +5,12 @@
             "height": 72
         },
         "max": {
-            "width": 9999,
-            "height": 9999
+            "width": 600,
+            "height": 100
         },
         "min": {
-            "width": 24,
-            "height": 24
+            "width": 260,
+            "height": 48
         }
     },
     "zones": [
@@ -23,18 +23,34 @@
         "orientation": "horizontal",
         "children": [
           {
-            "type": "PlantGridCell",
+            "type": "CompositeGridCell",
             "width_percent": 0.2,
             "height_percent": 1.0,
-            "pattern": "RectPositionPattern",
-            "plant": {
-              "label": "CO",
-              "width": 30,
-              "horizontal_spacing": 0,
-              "vertical_spacing": 0,
-              "search_query": {},
-              "tooltip": "Loose and natural looking mid size perennial, good for massing",
-              "plant_type": "Perennial"
+            "orientation": "vertical",
+            "children": [
+              {
+                "type": "PlantGridCell",
+                "width_percent": 1.0,
+                "height_percent": 0.5,
+                "pattern": "ZigZagPositionPattern",
+                "plant": {
+                  "label": "CO",
+                  "width": 28,
+                  "horizontal_spacing": -4,
+                  "vertical_spacing": -4,
+                  "search_query": {},
+                  "tooltip": "Loose and natural looking mid size perennial, good for massing",
+                  "plant_type": "Perennial"
+                }
+              },
+              {
+                "type": "EmptyGridCell",
+                "width_percent": 1.0,
+                "height_percent": 0.5
+              }
+            ],
+            "options": {
+              "min_width": 70
             }
           },
           {
@@ -45,23 +61,27 @@
             "plant": {
               "label": "W",
               "width": 36,
-              "horizontal_spacing": 0,
-              "vertical_spacing": 0,
+              "horizontal_spacing": -8,
+              "vertical_spacing": -8,
               "search_query": {},
               "tooltip": "Mid size deciduous shrub with showy flowers",
               "plant_type": "Shrub"
+            },
+            "options": {
+              "pattern": {
+                "start_position": "down"
+              }
             }
           },
           {
-            "type": "CompositeGridCell",
+            "type": "OverlayGridCell",
             "width_percent": 0.3,
             "height_percent": 1.0,
-            "orientation": "vertical",
             "children": [
               {
                 "type": "PlantGridCell",
                 "width_percent": 1.0,
-                "height_percent": 0.6,
+                "height_percent": 1.0,
                 "pattern": "ClumpingPositionPattern",
                 "plant": {
                   "label": "CC",
@@ -74,19 +94,45 @@
                 }
               },
               {
-                "type": "PlantGridCell",
+                "type": "CompositeGridCell",
                 "width_percent": 1.0,
-                "height_percent": 0.4,
-                "pattern": "RectPositionPattern",
-                "plant": {
-                  "label": "DI",
-                  "width": 28,
-                  "horizontal_spacing": 0,
-                  "vertical_spacing": 0,
-                  "search_query": {},
-                  "tooltip": "Small perennial with both striking foliage and blooms",
-                  "plant_type": "Perennial"
-                }
+                "height_percent": 1.0,
+                "orientation": "vertical",
+                "children": [
+                  {
+                    "type": "EmptyGridCell",
+                    "width_percent": 1.0,
+                    "height_percent": 0.6
+                  },
+                  {
+                    "type": "CompositeGridCell",
+                    "width_percent": 1.0,
+                    "height_percent": 0.4,
+                    "orientation": "horizontal",
+                    "children": [
+                      {
+                        "type": "PlantGridCell",
+                        "width_percent":  0.6,
+                        "height_percent": 1.0,
+                        "pattern": "ZigZagPositionPattern",
+                        "plant": {
+                          "label": "DI",
+                          "width": 22,
+                          "horizontal_spacing": -4,
+                          "vertical_spacing": -4,
+                          "search_query": {},
+                          "tooltip": "Small perennial with both striking foliage and blooms",
+                          "plant_type": "Perennial"
+                        }
+                      },
+                      {
+                        "type": "EmptyGridCell",
+                        "width_percent": 0.4,
+                        "height_percent": 1.0
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
