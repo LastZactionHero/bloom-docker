@@ -1,0 +1,96 @@
+{
+    "size": {
+        "design": {
+            "width": 360,
+            "height": 72
+        },
+        "max": {
+            "width": 9999,
+            "height": 9999
+        },
+        "min": {
+            "width": 24,
+            "height": 24
+        }
+    },
+    "zones": [
+        "5"
+    ],
+    "cell": {
+        "type": "CompositeGridCell",
+        "width_percent": 1.0,
+        "height_percent": 1.0,
+        "orientation": "horizontal",
+        "children": [
+          {
+            "type": "PlantGridCell",
+            "width_percent": 0.2,
+            "height_percent": 1.0,
+            "pattern": "RectPositionPattern",
+            "plant": {
+              "label": "CO",
+              "width": 30,
+              "horizontal_spacing": 0,
+              "vertical_spacing": 0,
+              "search_query": {},
+              "tooltip": "Loose and natural looking mid size perennial, good for massing",
+              "plant_type": "Perennial"
+            }
+          },
+          {
+            "type": "PlantGridCell",
+            "width_percent": 0.5,
+            "height_percent": 1.0,
+            "pattern": "ZigZagPositionPattern",
+            "plant": {
+              "label": "W",
+              "width": 36,
+              "horizontal_spacing": 0,
+              "vertical_spacing": 0,
+              "search_query": {},
+              "tooltip": "Mid size deciduous shrub with showy flowers",
+              "plant_type": "Shrub"
+            }
+          },
+          {
+            "type": "CompositeGridCell",
+            "width_percent": 0.3,
+            "height_percent": 1.0,
+            "orientation": "vertical",
+            "children": [
+              {
+                "type": "PlantGridCell",
+                "width_percent": 1.0,
+                "height_percent": 0.6,
+                "pattern": "ClumpingPositionPattern",
+                "plant": {
+                  "label": "CC",
+                  "width": 22,
+                  "horizontal_spacing": 0,
+                  "vertical_spacing": 0,
+                  "search_query": {},
+                  "tooltip": "Semi evergreen perennial",
+                  "plant_type": "Perennial"
+                }
+              },
+              {
+                "type": "PlantGridCell",
+                "width_percent": 1.0,
+                "height_percent": 0.4,
+                "pattern": "RectPositionPattern",
+                "plant": {
+                  "label": "DI",
+                  "width": 28,
+                  "horizontal_spacing": 0,
+                  "vertical_spacing": 0,
+                  "search_query": {},
+                  "tooltip": "Small perennial with both striking foliage and blooms",
+                  "plant_type": "Perennial"
+                }
+              }
+            ]
+          }
+        ]
+    },
+    "name": "Informal C"
+}
