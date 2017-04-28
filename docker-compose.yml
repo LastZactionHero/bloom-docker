@@ -46,6 +46,7 @@ services:
     image: postgres
     volumes:
       - pgdata:/var/lib/postgres/data
+      - ./:/restore
 
 volumes:
   pgdata:
