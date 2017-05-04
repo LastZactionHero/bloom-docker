@@ -1,0 +1,49 @@
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - "*.gemspec"
+  TargetRubyVersion: 2.3
+
+##################### Rails ##################################
+
+Rails:
+  Enabled: true
+
+Rails/ReadWriteAttribute:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+##################### Style ##################################
+
+Style/AsciiComments:
+    Enabled: false
+
+Style/TrailingWhitespace:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Description: >-
+                 Checks formatting of special comments
+                 (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#annotate-keywords'
+  Enabled: true
+
+Style/ClassCheck:
+  EnforcedStyle: kind_of?
+  SupportedStyles:
+    - is_a?
+    - kind_of?
+
+##################### Metrics ##################################
+
+Metrics/LineLength:
+  Max: 130
+
+Metrics/MethodLength:
+  Max: 15
